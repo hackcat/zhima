@@ -6,7 +6,7 @@
  * Time: 14:19
  */
 
-namespace Hackcat\Zmxy\Core;
+namespace Hackcat\Zhima\Core;
 
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\HandlerStack;

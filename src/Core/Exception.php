@@ -6,7 +6,7 @@
  * Time: 14:31
  */
 
-namespace Hackcat\Zmxy\Core;
+namespace Hackcat\Zhima\Core;
 
 use Exception as BaseException;
 

@@ -6,11 +6,11 @@
  * Time: 14:03
  */
 
-namespace Hackcat\Zmxy\Foundation;
+namespace Hackcat\Zhima\Foundation;
 
 use Doctrine\Common\Cache\Cache as CacheInterface;
 use Doctrine\Common\Cache\FilesystemCache;
-use Hackcat\Zmxy\Core\Http;
+use Hackcat\Zhima\Core\Http;
 use Pimple\Container;
 use Symfony\Component\HttpFoundation\Request;
 

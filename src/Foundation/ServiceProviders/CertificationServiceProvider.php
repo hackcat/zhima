@@ -6,10 +6,10 @@
  * Time: 15:38
  */
 
-namespace Hackcat\Zmxy\ServiceProviders;
+namespace Hackcat\Zhima\ServiceProviders;
 
 
-use Hackcat\Zmxy\Certification\Certification;
+use Hackcat\Zhima\Certification\Certification;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 

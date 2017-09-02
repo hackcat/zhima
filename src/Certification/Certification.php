@@ -6,10 +6,10 @@
  * Time: 15:11
  */
 
-namespace Hackcat\Zmxy\Certification;
+namespace Hackcat\Zhima\Certification;
 
 
-use Hackcat\Zmxy\Core\AbstractBase;
+use Hackcat\Zhima\Core\AbstractBase;
 use Pimple\Container;
 
 class Certification extends AbstractBase

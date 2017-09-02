@@ -6,10 +6,10 @@
  * Time: 14:27
  */
 
-namespace Hackcat\Zmxy\Foundation\Encryption;
+namespace Hackcat\Zhima\Foundation\Encryption;
 
 
-use Hackcat\Zmxy\Core\Exceptions\RuntimeException;
+use Hackcat\Zhima\Core\Exceptions\RuntimeException;
 use Pimple\Container;
 
 class Encryptor

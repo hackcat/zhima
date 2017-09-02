@@ -6,12 +6,12 @@
  * Time: 15:11
  */
 
-namespace Hackcat\Zmxy\Core;
+namespace Hackcat\Zhima\Core;
 
 
 use Hackcat\Zhima\Support\Collection;
 use Hackcat\Zhima\Support\WebUtil;
-use Hackcat\Zmxy\Foundation\Encryption\Encryptor;
+use Hackcat\Zhima\Foundation\Encryption\Encryptor;
 use Pimple\Container;
 
 abstract class AbstractBase

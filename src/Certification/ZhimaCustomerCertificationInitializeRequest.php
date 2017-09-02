@@ -1,5 +1,5 @@
 <?php
-namespace Hackcat\Zmxy\Certification;
+namespace Hackcat\Zhima\Certification;
 
 /**
  * ZHIMA API: zhima.customer.certification.initialize request

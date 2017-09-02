@@ -6,7 +6,7 @@
  * Time: 14:05
  */
 
-namespace Hackcat\Zmxy\Foundation;
+namespace Hackcat\Zhima\Foundation;
 
 
 use Hackcat\Zhima\Support\Collection;

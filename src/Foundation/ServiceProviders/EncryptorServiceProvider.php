@@ -6,10 +6,10 @@
  * Time: 14:24
  */
 
-namespace Hackcat\Zmxy\ServiceProviders;
+namespace Hackcat\Zhima\ServiceProviders;
 
 
-use Hackcat\Zmxy\Foundation\Encryption\Encryptor;
+use Hackcat\Zhima\Foundation\Encryption\Encryptor;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 

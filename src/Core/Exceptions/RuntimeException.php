@@ -6,10 +6,10 @@
  * Time: 14:30
  */
 
-namespace Hackcat\Zmxy\Core\Exceptions;
+namespace Hackcat\Zhima\Core\Exceptions;
 
 
-use Hackcat\Zmxy\Core\Exception;
+use Hackcat\Zhima\Core\Exception;
 
 class RuntimeException extends Exception
 {
