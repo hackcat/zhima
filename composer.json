@@ -1,5 +1,5 @@
 {
-    "name": "hackcat/zmxy",
+    "name": "hackcat/zhima",
     "description": "芝麻信用",
     "keywords": [
         "zhima",
@@ -29,7 +29,7 @@
     "minimum-stability" : "dev",
     "autoload": {
         "psr-4": {
-            "Hackcat\\Zmxy\\": "src/"
+            "Hackcat\\Zhima\\": "src/"
         }
     }
 }
