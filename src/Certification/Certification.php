@@ -32,7 +32,7 @@ class Certification extends AbstractBase
     public function getBizNo()
     {
         $request = new ZhimaCustomerCertificationInitializeRequest();
-        $request->setChannel("apppc");
+        $request->setChannel("appsdk");
         $request->setPlatform("zmop");
         $date = date("YmdHis");
         $request->setTransactionId("ZGYD{$date}23000001234");// 必要参数
@@ -42,6 +42,7 @@ class Certification extends AbstractBase
         $request->setMerchantConfig("{\"need_user_authorization\":\"false\"}");//
         $request->setExtBizParam("{}");// 必要参数
 
+        $this->channel = 'appsdk';
         $this->method = $request->getApiMethodName();
         $this->biz_attributes = $request->getApiParas();
 
@@ -54,7 +55,7 @@ class Certification extends AbstractBase
     {
         $bizNo = $this->getBizNo();
         $request = new ZhimaCustomerCertificationCertifyRequest();
-        $request->setChannel("apppc");
+        $request->setChannel("appsdk");
         $request->setPlatform("zmop");
         $request->setBizNo($bizNo);
         $request->setReturnUrl($this->return_url);
