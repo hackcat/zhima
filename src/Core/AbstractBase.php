@@ -23,9 +23,16 @@ abstract class AbstractBase
     protected $http = null;
 
     public $sys_attributes = [
-        'app_id'    =>  '',
-        'scence'    =>  '',
-        'charset'   =>  'UTF-8',
+        'app_id'    => '',
+        'scene'     => '',
+        'charset'   => 'UTF-8',
+        'method'    => '',
+        'version'   => '1.0',
+        'channel'   => '',
+        'platform'  => 'zmop',
+        'params'    => '',
+        'sign'      => '',
+        'ext_params'=> '',
     ];
 
     public $biz_attributes = [];
