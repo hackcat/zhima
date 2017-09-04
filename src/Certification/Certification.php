@@ -21,6 +21,7 @@ class Certification extends AbstractBase
         'cert_name'      =>  '',
         'cert_no'        =>  '',
         'identity_param' => '',
+        'return_url'     => '',
     ];
 
     public function __construct(Container $application)
@@ -56,10 +57,10 @@ class Certification extends AbstractBase
         $request->setChannel("apppc");
         $request->setPlatform("zmop");
         $request->setBizNo($bizNo);
-        $request->setReturnUrl("http://www.taobao.com");
+        $request->setReturnUrl($this->return_url);
 
         $this->method = $request->getApiMethodName();
-        $this->channel = 'apppc';
+        $this->channel = 'appsdk';
         $this->biz_attributes = $request->getApiParas();
 
         $data = $this->getUrl();
