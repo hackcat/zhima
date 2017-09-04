@@ -15,11 +15,12 @@ use Pimple\Container;
 class Certification extends AbstractBase
 {
     public $biz_attributes = [
-        'cert_type'     =>  '',
-        'biz_code'      =>  '',
-        'identity_type' =>  '',
-        'cert_name'     =>  '',
-        'cert_no'       =>  '',
+        'cert_type'      =>  '',
+        'biz_code'       =>  '',
+        'identity_type'  =>  '',
+        'cert_name'      =>  '',
+        'cert_no'        =>  '',
+        'identity_param' => '',
     ];
 
     public function __construct(Container $application)
@@ -27,7 +28,8 @@ class Certification extends AbstractBase
         parent::__construct($application);
     }
 
-    public function getBizNo() {
+    public function getBizNo()
+    {
         $request = new ZhimaCustomerCertificationInitializeRequest();
         $request->setChannel("apppc");
         $request->setPlatform("zmop");
@@ -35,13 +37,32 @@ class Certification extends AbstractBase
         $request->setTransactionId("ZGYD{$date}23000001234");// 必要参数
         $request->setProductCode("w1010100000000002978");// 必要参数
         $request->setBizCode("FACE");// 必要参数
-        $request->setIdentityParam("{\"identity_type\":\"CERT_INFO\",\"cert_type\":\"IDENTITY_CARD\",\"cert_name\":\"冯鹏钰\",\"cert_no\":\"330621198905147398\"}");// 必要参数
+        $request->setIdentityParam($this->identity_type);
         $request->setMerchantConfig("{\"need_user_authorization\":\"false\"}");//
         $request->setExtBizParam("{}");// 必要参数
 
+        $this->method = $request->getApiMethodName();
         $this->biz_attributes = $request->getApiParas();
 
         $data = $this->get();
+        return $data;
+    }
+
+
+    public function getCertUrl()
+    {
+        $bizNo = $this->getBizNo();
+        $request = new ZhimaCustomerCertificationCertifyRequest();
+        $request->setChannel("apppc");
+        $request->setPlatform("zmop");
+        $request->setBizNo($bizNo);
+        $request->setReturnUrl("http://www.taobao.com");
+
+        $this->method = $request->getApiMethodName();
+        $this->channel = 'apppc';
+        $this->biz_attributes = $request->getApiParas();
+
+        $data = $this->getUrl();
         return $data;
     }
 }
