@@ -6,7 +6,7 @@
  * Time: 14:24
  */
 
-namespace Hackcat\Zhima\ServiceProviders;
+namespace Hackcat\Zhima\Foundation\ServiceProviders;
 
 
 use Hackcat\Zhima\Foundation\Encryption\Encryptor;

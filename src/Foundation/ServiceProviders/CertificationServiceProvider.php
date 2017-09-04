@@ -6,7 +6,7 @@
  * Time: 15:38
  */
 
-namespace Hackcat\Zhima\ServiceProviders;
+namespace Hackcat\Zhima\Foundation\ServiceProviders;
 
 
 use Hackcat\Zhima\Certification\Certification;
@@ -17,7 +17,7 @@ class CertificationServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $pimple)
     {
-        $pimple['auth'] = function ($pimple) {
+        $pimple['cert'] = function ($pimple) {
             return new Certification($pimple);
         };
     }

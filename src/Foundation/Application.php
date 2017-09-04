@@ -23,7 +23,8 @@ class Application extends Container
      */
 
     protected $providers = [
-
+        ServiceProviders\EncryptorServiceProvider::class,
+        ServiceProviders\CertificationServiceProvider::class,
     ];
 
     public function __construct($config)
